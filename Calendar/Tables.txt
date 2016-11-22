@@ -1,0 +1,46 @@
+
+SET FOREIGN_KEY_CHECKS = 1;
+//FRESH COPY OF TABLES
+
+create table USERINFO
+(username varchar(30) NOT NULL ,password varchar(30) NOT NULL ,name varchar(30) NOT NULL,email varchar(30) NOT NULL,
+PRIMARY KEY(username));
+
+create table EVENT_USER_KEYS
+( eventId int NOT NULL AUTO_INCREMENT,username varchar(30) NOT NULL, PRIMARY KEY(eventId,username),
+FOREIGN KEY (username) REFERENCES USERINFO(username));
+
+create table EVENTS_TABLE
+(eventId int, name varchar(30),location varchar(30),date date,budget int,balance int,startDate date,
+PRIMARY KEY(eventId),
+FOREIGN KEY (eventId) REFERENCES EVENT_USER_KEYS(eventId) ON DELETE CASCADE);
+
+create table CONTACTS
+(eventId int,identifier varchar(40),invited int, PRIMARY KEY(eventId,identifier),
+FOREIGN KEY (eventID) REFERENCES EVENT_USER_KEYS(eventId) ON DELETE CASCADE);
+
+create table VENDORS
+(eventId int,identifier varchar(40),invited int, PRIMARY KEY(eventId,identifier),
+FOREIGN KEY (eventID) REFERENCES EVENT_USER_KEYS(eventId) ON DELETE CASCADE);
+
+create table CALENDAR
+(eventId int,todoId int AUTO_INCREMENT,date date,name varchar(30), PRIMARY KEY(todoId),
+FOREIGN KEY(eventId) REFERENCES EVENT_USER_KEYS(eventId) ON DELETE CASCADE);
+
+create table categories
+( main_id int not null, budget float not null, name varchar(255) not null ,catId int NOT NULL AUTO_INCREMENT,
+PRIMARY KEY(catId) , FOREIGN KEY (main_id) REFERENCES EVENT_USER_KEYS(eventId) ON DELETE CASCADE );
+
+create table items ( catId int not null, name varchar(40) not null, cost int,   PRIMARY KEY(catId,name),   FOREIGN KEY(catId) REFERENCES categories(catId) ON DELETE CASCADE );
+
+
+//ICONS PACK
+icons8.com
+
+//Cocoapods used
+
+https://cocoapods.org/?q=eVcontac
+https://cocoapods.org/?q=circle%20menu
+https://cocoapods.org/?q=JTApp
+https://cocoapods.org/?q=SAcon
+https://cocoapods.org/?q=Toaster

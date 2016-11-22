@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CellView" customModule="Calendar" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="181" height="144"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Yn-bf-0iL">
+                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnB-5B-owb">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="2Yn-bf-0iL" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Bct-OQ-DQd"/>
+                <constraint firstItem="2Yn-bf-0iL" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.7" id="HEX-J9-WGM"/>
+                <constraint firstItem="2Yn-bf-0iL" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="PSv-lD-M7z"/>
+                <constraint firstItem="JnB-5B-owb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fp8-ZL-6BQ"/>
+                <constraint firstItem="JnB-5B-owb" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="h9g-cT-zGe"/>
+                <constraint firstItem="2Yn-bf-0iL" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.7" id="lYZ-09-igk"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="dayLabel" destination="JnB-5B-owb" id="zzj-GL-EGS"/>
+                <outlet property="selectedView" destination="2Yn-bf-0iL" id="3hd-cL-DpJ"/>
+            </connections>
+            <point key="canvasLocation" x="-15" y="-89"/>
+        </view>
+    </objects>
+</document>

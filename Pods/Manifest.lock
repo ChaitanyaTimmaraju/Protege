@@ -1,0 +1,24 @@
+PODS:
+  - CircleMenu (2.0.1)
+  - EVContactsPicker (0.5.1)
+  - JTAppleCalendar (6.0.1)
+  - SAConfettiView (0.1.8)
+  - Toaster (2.0.1)
+
+DEPENDENCIES:
+  - CircleMenu (~> 2.0.1)
+  - EVContactsPicker
+  - JTAppleCalendar (~> 6.0)
+  - SAConfettiView
+  - Toaster (~> 2.0)
+
+SPEC CHECKSUMS:
+  CircleMenu: a964e8b03aae58c84b40d5cf64630b62bef077eb
+  EVContactsPicker: ef3a5920a76c851dbbb22c8c0606e5e01f0e7123
+  JTAppleCalendar: 7793cd7284a495ed72b0cad225c1be835eefa018
+  SAConfettiView: c87031a2280659261b730fce3669fb10e73636ee
+  Toaster: be65cd48e93a525b2a9cc4bd25a2bfc900e02d9f
+
+PODFILE CHECKSUM: ff1209c8af88ee7b3f56fcc52e8f74e30d39b9ea
+
+COCOAPODS: 1.1.1
